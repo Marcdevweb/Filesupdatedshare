@@ -1,0 +1,26 @@
+<div id="promo-popup" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+    <div class="relative p-4 w-full max-w-2xl h-full md:h-auto">
+        <div class="relative p-4 bg-white rounded-lg shadow dark:bg-gray-800 md:p-6">
+            <div class="flex items-center mb-2.5">
+                <span class="bg-green-100 text-green-800 text-sm font-medium mr-2 px-2.5 inline-flex items-center py-0.5 rounded dark:bg-green-200 dark:text-green-900">
+                    <svg class="mr-1 -ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path></svg>
+                    Opening Day
+                </span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">October 21, 2023</span>
+            </div>
+            <div class="mb-5 text-sm font-light text-gray-500 dark:text-gray-400">
+                <h3 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Store Opening Update</h3>
+                <p class="mb-4">Hello,</p>
+                <p class="mb-4">Thank you for scheduling your lease appointment through our new system. We truly appreciate your proactivity. Since acquiring the new business just a week ago, we've been working tirelessly to get everything set. However, we must inform you that we won't be ready by Monday as previously planned.</p>
+                <p class="font-semibold mb-4">New Opening Date: <span class="text-blue-600">Monday, Oct 30.</span></p>
+                <p class="font-semibold mb-4">Operating Hours: <span class="text-blue-600">Weekdays 10 AM - 7 PM, Weekends 12 PM - 5 PM.</span></p>
+                <p class="mb-4">We apologize for any inconvenience. Please select a new time slot from Monday 10/30 onwards. We're excited to meet you and can't wait to open our doors!</p>
+                <p class="font-bold text-left">Warm regards,</p>
+                <p class="text-left">Alpine Base Edge Team</p>
+            </div>
+            <div class="flex items-center pt-0 space-x-4">
+                <a href="#" @click="$store.app.openingPopup = false" id="close-modal" class="py-2 px-4 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-auto hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Close</a>
+            </div>
+        </div>
+    </div>
+  </div>

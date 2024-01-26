@@ -1,0 +1,71 @@
+<vds-media>
+  <vds-aspect-ratio ratio="16/9">
+    <vds-video controls poster="/img/video/poster-2.jpg">
+      <video
+        controls
+        muted
+        src="/img/video/1.mp4"
+        preload="none"
+      ></video>
+      <vds-play-button
+        class="
+          absolute
+          top-1/2
+          left-1/2
+          -translate-x-1/2 -translate-y-1/2
+          z-20
+          pointer-events-none
+        "
+      >
+        <!-- play Icon. -->
+        <button
+          type="button"
+          class="
+            h-12
+            w-12
+            flex
+            items-center
+            justify-center
+            rounded-full
+            bg-white
+            group-hover:bg-primary-500
+            border-2 border-primary-500
+            pointer-events-none
+            media-paused:opacity-100
+            media-playing:opacity-0
+            opacity-0
+            transition-all
+            duration-300
+          "
+        >
+          <i
+            class="
+              iconify
+              w-6
+              h-6
+              -mr-1
+              text-primary-500
+              group-hover:text-white
+              pointer-events-none
+            "
+            data-icon="ion:play"
+          ></i>
+        </button>
+      </vds-play-button>
+    </vds-video>
+    <vds-poster
+      class="
+        absolute
+        top-0
+        left-0
+        h-full
+        w-full
+        z-10
+        media-playing:opacity-0
+        transition-opacity
+        duration-300
+      "
+      alt="Video poster"
+    ></vds-poster>
+  </vds-aspect-ratio>
+</vds-media>

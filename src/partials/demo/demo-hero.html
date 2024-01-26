@@ -1,0 +1,343 @@
+<section
+  class="
+    relative
+    w-full
+    min-h-screen
+    ptablet:max-h-[1100px]
+    bg-muted-100
+    dark:bg-muted-1000
+    overflow-hidden
+  "
+>
+  <!--Background shape-->
+  <img
+    class="
+      block
+      absolute
+      top-0
+      right-0
+      z-0
+      w-full
+      max-w-[200px]
+      md:max-w-sm
+      dark:invert dark:opacity-40
+    "
+    src="/img/demo/line-pattern.svg"
+    alt="Line pattern"
+    width="384"
+    height="384"
+  />
+
+  <div class="relative w-full max-w-7xl mx-auto z-10">
+    <div class="w-full min-h-screen flex items-center">
+      <div
+        class="w-full h-full min-h-screen flex flex-col justify-between px-6"
+      >
+        <!--Hero content-->
+        <div
+          class="
+            relative
+            w-full
+            h-full
+            min-h-screen
+            flex flex-col
+            pt-32
+            md:pt-20
+            ltablet:-m-3
+            lg:-mx-3
+          "
+        >
+          <!--Column-->
+          <div class="relative w-full px-6 my-6 z-10">
+            <div class="max-w-2xl space-y-4 text-center mx-auto ptablet:mt-32">
+              <h1
+                class="
+                  relative
+                  top-1
+                  font-heading font-light
+                  text-5xl
+                  md:text-6xl
+                  text-muted-800
+                  dark:text-white
+                "
+              >
+                Finity
+                <span class="text-primary-500">UI</span>
+              </h1>
+              <p class="font-sans text-sm font-medium text-primary-500">
+                Tailwind + Alpine + Vite &mdash; Car Dealer UI Kit
+              </p>
+              <p
+                class="
+                  relative
+                  -top-1
+                  font-sans
+                  text-lg text-muted-500
+                  dark:text-muted-400
+                "
+              >
+                Finity is a well designed Tailwind CSS Car dealer / retailer
+                template that will help you jumpstart your development project
+                seamlessly.
+              </p>
+
+              <div
+                class="
+                  flex flex-col
+                  md:flex-row
+                  items-center
+                  justify-center
+                  gap-2
+                "
+              >
+                <a
+                  href="https://go.cssninja.io/buy-finity/"
+                  class="
+                    relative
+                    font-sans font-normal
+                    inline-flex
+                    items-center
+                    justify-center
+                    leading-5
+                    no-underline
+                    w-full
+                    md:w-auto
+                    min-w-[130px]
+                    space-x-1
+                    rounded
+                    text-white
+                    bg-primary-600
+                    h-12
+                    px-5
+                    py-3
+                    text-base
+                    hover:bg-primary-500
+                    hover:shadow-xl
+                    hover:shadow-primary-600/20
+                    tw-accessibility
+                    transition-all
+                    duration-300
+                  "
+                >
+                  Buy Now
+                </a>
+                <a
+                  href="#get-started"
+                  class="
+                    relative
+                    font-sans font-normal
+                    inline-flex
+                    items-center
+                    justify-center
+                    leading-5
+                    no-underline
+                    w-full
+                    md:w-auto
+                    min-w-[130px]
+                    space-x-1
+                    rounded
+                    text-slate-700
+                    bg-white
+                    border
+                    dark:text-white dark:bg-slate-700 dark:border-slate-600
+                    h-12
+                    px-5
+                    py-3
+                    text-base
+                    hover:bg-slate-50
+                    tw-accessibility
+                    transition-all
+                    duration-300
+                    scroll-link
+                  "
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!--Column-->
+          <div
+            class="
+              relative
+              w-full
+              max-w-3xl
+              ptablet:max-w-xl
+              mx-auto
+              px-0
+              md:px-6
+              pt-6
+              mt-auto
+            "
+          >
+            <img
+              class="
+                relative
+                block
+                dark:hidden
+                border border-muted-200
+                dark:border-muted-800
+                border-b-0
+                rounded-t-lg
+                shadow-2xl shadow-muted-500/20
+                dark:shadow-muted-800/20
+              "
+              src="/img/demo/finity-mockup-1.png"
+              alt="Finity Mockup"
+              width="720"
+              height="624"
+            />
+            <img
+              class="
+                relative
+                hidden
+                dark:block
+                border border-muted-200
+                dark:border-muted-800
+                border-b-0
+                rounded-t-lg
+                shadow-2xl shadow-muted-500/20
+                dark:shadow-muted-800/20
+              "
+              src="/img/demo/finity-mockup-1-dark.png"
+              alt="Finity Mockup"
+              width="720"
+              height="624"
+            />
+            <div
+              class="
+                hidden
+                absolute
+                md:block md:bottom-0
+                -left-12
+                max-w-[100px]
+                ltablet:max-w-[180px]
+                lg:max-w-[180px]
+                text-primary-500
+              "
+            >
+              {{> demo/demo-hand}}
+            </div>
+
+            <div
+              class="
+                absolute
+                -top-20
+                -left-16
+                z-10
+                w-20
+                h-20
+                flex
+                items-center
+                justify-center
+                bg-white
+                dark:bg-muted-800
+                border border-muted-200
+                dark:border-muted-700
+                rounded-full
+                shadow-2xl shadow-muted-500/20
+                dark:shadow-muted-800/20
+              "
+            >
+              <img
+                class="block w-10 h-10"
+                src="/img/logos/tailwindcss.svg"
+                alt="Tech logo"
+                width="24"
+                height="24"
+              />
+            </div>
+
+            <div
+              class="
+                absolute
+                top-16
+                -left-28
+                z-10
+                w-14
+                h-14
+                flex
+                items-center
+                justify-center
+                bg-white
+                dark:bg-muted-800
+                border border-muted-200
+                dark:border-muted-700
+                rounded-full
+                shadow-2xl shadow-muted-500/20
+                dark:shadow-muted-800/20
+              "
+            >
+              <img
+                class="block w-6 h-6"
+                src="/img/logos/vitejs.svg"
+                alt="Tech logo"
+                width="24"
+                height="24"
+              />
+            </div>
+
+            <div
+              class="
+                absolute
+                -top-4
+                -left-48
+                z-10
+                w-16
+                h-16
+                flex
+                items-center
+                justify-center
+                bg-white
+                dark:bg-muted-800
+                border border-muted-200
+                dark:border-muted-700
+                rounded-full
+                shadow-2xl shadow-muted-500/20
+                dark:shadow-muted-800/20
+              "
+            >
+              <img
+                class="block w-7 h-7"
+                src="/img/logos/alpinejs.svg"
+                alt="Tech logo"
+                width="24"
+                height="24"
+              />
+
+              <div
+                class="
+                  absolute
+                  -top-24
+                  -right-4
+                  z-10
+                  w-14
+                  h-14
+                  flex
+                  items-center
+                  justify-center
+                  bg-white
+                  dark:bg-muted-800
+                  border border-muted-200
+                  dark:border-muted-700
+                  rounded-full
+                  shadow-2xl shadow-muted-500/20
+                  dark:shadow-muted-800/20
+                "
+              >
+                <img
+                  class="block w-8 h-8"
+                  src="/img/logos/html5.svg"
+                  alt="Tech logo"
+                  width="24"
+                  height="24"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

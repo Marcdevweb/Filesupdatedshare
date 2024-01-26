@@ -1,0 +1,269 @@
+<nav
+  class="
+    text-muted-700
+    body-font
+    fixed
+    w-screen
+    z-50
+    transition
+    duration-300
+    ease-in-out
+    flex flex-col
+    lg:flex-row lg:items-center
+    flex-shrink-0
+    px-5
+  "
+  x-data="navbar()"
+  x-init="initTheme(), initScrollAnchors()"
+  x-on:scroll.window="scroll()"
+  x-bind:class="{
+        'bg-white dark:bg-muted-800 shadow-lg shadow-muted-400/10 dark:shadow-muted-800/10': scrolled,
+        '': !scrolled,
+        'bg-white dark:bg-muted-800': mobileOpen,
+        '': !mobileOpen
+    }"
+>
+  <div
+    class="
+      w-full
+      max-w-7xl
+      mx-auto
+      flex flex-wrap
+      py-3
+      flex-row
+      items-center
+      sm:justify-between
+    "
+  >
+    <div class="flex justify-between items-center w-full lg:w-1/5">
+      <a
+        href="/"
+        class="
+          group
+          flex
+          title-font
+          font-light
+          items-center
+          gap-2
+          text-muted-900
+          dark:text-muted-100
+        "
+      >
+        <div
+          class="
+            h-14
+            w-14
+            group-hover:text-primary-500
+            transition-colors
+            duration-300
+          "
+        >
+          {{> vector/logos/logo}}
+        </div>
+        <span class="text-2xl">Finity</span>
+      </a>
+
+      <!-- Hamburger -->
+      <button
+        type="button"
+        class="
+          flex
+          relative
+          justify-center
+          items-center
+          ml-auto
+          w-10
+          h-10
+          focus:outline-none
+          lg:hidden
+        "
+        @click="mobileOpen = !mobileOpen"
+      >
+        <div class="block top-1/2 left-6 w-4 -translate-x-1/2 -translate-y-1/2">
+          <span
+            class="
+              block
+              absolute
+              w-7
+              h-0.5
+              text-primary-500
+              bg-current
+              transition
+              duration-500
+              ease-in-out
+            "
+            :class="mobileOpen ? 'rotate-45' : '-translate-y-2'"
+          ></span>
+          <span
+            class="
+              block
+              absolute
+              w-5
+              h-0.5
+              text-primary-500
+              bg-current
+              transition
+              duration-500
+              ease-in-out
+            "
+            :class="mobileOpen ? 'opacity-0' : ''"
+          ></span>
+          <span
+            class="
+              block
+              absolute
+              w-7
+              h-0.5
+              text-primary-500
+              bg-current
+              transition
+              duration-500
+              ease-in-out
+            "
+            :class="mobileOpen ? '-rotate-45' : 'translate-y-2'"
+          ></span>
+        </div>
+      </button>
+    </div>
+    <div
+      class="hidden text-center lg:text-left lg:flex flex-grow"
+      :class="{
+          'block': mobileOpen,
+          'hidden': !mobileOpen
+      }"
+    >
+      <ul
+        class="
+          flex flex-col
+          mt-3
+          mb-1
+          lg:flex-row lg:mx-auto lg:mt-0 lg:mb-0 lg:gap-x-4
+        "
+      >
+        <li>
+          <a
+            href="https://go.cssninja.io/buy-finity/"
+            class="
+              block
+              text-base
+              font-sans
+              hover:text-primary-500
+              dark:text-muted-200 dark:hover:text-primary-400
+              py-2
+              md:mx-2
+              tw-accessibility
+            "
+          >
+            Product
+          </a>
+        </li>
+        <li>
+          <a
+            href="#template-demos"
+            class="
+              block
+              text-base
+              font-sans
+              hover:text-primary-500
+              py-2
+              dark:text-muted-200 dark:hover:text-primary-400
+              md:mx-2
+              tw-accessibility
+              scroll-link
+            "
+          >
+            Demo pages
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://go.cssninja.io/docs-finity/"
+            class="
+              block
+              text-base
+              font-sans
+              hover:text-primary-500
+              dark:text-muted-200 dark:hover:text-primary-400
+              py-2
+              md:mx-2
+              tw-accessibility
+            "
+          >
+            Documentation
+          </a>
+        </li>
+      </ul>
+      <div class="flex flex-col my-3 lg:hidden">
+        <div class="mb-4">
+          <!--Dark mode-->
+          {{> theme/theme-toggler-base}}
+        </div>
+        <a
+          href="https://go.cssninja.io/support-finity/"
+          class="
+            relative
+            w-full
+            font-sans font-normal
+            inline-flex
+            items-center
+            justify-center
+            leading-5
+            no-underline
+            min-w-[130px]
+            space-x-1
+            text-white
+            bg-primary-500
+            h-12
+            px-5
+            py-3
+            text-base
+            rounded-xl
+            hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-500/20
+            tw-accessibility
+            transition-all
+            duration-300
+          "
+        >
+          Get Support
+        </a>
+      </div>
+    </div>
+
+    <div class="hidden lg:flex lg:w-1/5 lg:justify-end lg:gap-x-4">
+      <div class="h-12 w-12 flex items-center justify-center">
+        <!--Dark mode-->
+        {{> theme/theme-toggler-base}}
+      </div>
+      <a
+        href="https://docs.cssninja.io/finity/"
+        class="
+          relative
+          font-sans font-normal
+          inline-flex
+          items-center
+          justify-center
+          leading-5
+          no-underline
+          min-w-[130px]
+          space-x-1
+          rounded
+          text-white
+          bg-muted-800
+          dark:bg-muted-900
+          h-12
+          px-5
+          py-3
+          text-base
+          hover:bg-muted-700
+          dark:hover:bg-muted-1000
+          hover:shadow-xl hover:shadow-muted-300/20 dark:hover:shadow-muted-1000/20
+          tw-accessibility
+          transition-all
+          duration-300
+        "
+      >
+        Get Support
+      </a>
+    </div>
+  </div>
+</nav>

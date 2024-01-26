@@ -1,0 +1,492 @@
+<nav
+  class="
+    absolute
+    w-full
+    z-50
+    transition-all
+    duration-300
+    ease-in-out
+    flex flex-col flex-shrink-0
+    divide-y
+    bg-white dark:bg-muted-900
+  "
+  x-data="navbar()"
+  x-init="initTheme()"
+  x-on:mouseleave="megamenuOpened = false, openedMegamenu = ''"
+  :class="[
+    scrolled || megamenuOpened || mobileOpen ? 'bg-muted-900 dark:bg-muted-800 divide-muted-800 dark:divide-muted-700 shadow-lg dark:shadow-muted-800/10' : 'divide-muted-200 dark:divide-muted-800',
+  ]"
+>
+  <div class="w-full mt-2">
+    <div
+      class="
+        w-full
+        max-w-7xl
+        mx-auto
+        flex flex-wrap
+        py-2
+        px-5
+        flex-row
+        items-center
+        sm:justify-between
+      "
+    >
+      <div class="flex justify-between items-center w-full lg:w-1/5">
+        <a
+          href="/index.html"
+          class="group flex font-sans font-light items-center gap-4"
+          :class="scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'"
+        >
+          <div
+            class="
+              h-14
+              w-14
+              group-hover:text-primary-500
+              dark:text-muted-100
+              transition-colors
+              duration-300
+              text-muted-900
+              dark:text-muted-100
+            "
+          >
+            {{> vector/logos/logo}}
+          </div>
+        </a>
+
+        <!-- Hamburger -->
+        <button
+          class="
+            flex
+            relative
+            justify-center
+            items-center
+            ml-auto
+            w-10
+            h-10
+            focus:outline-none
+            lg:hidden
+            scale-90
+          "
+          @click="mobileOpen = !mobileOpen"
+        >
+          <div
+            class="block top-1/2 left-6 w-4 -translate-x-1/2 -translate-y-1/2"
+          >
+            <span
+              class="
+                block
+                absolute
+                w-7
+                h-0.5
+                bg-current
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="[
+                mobileOpen ? 'rotate-45' : '-translate-y-2',
+                scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+              ]"
+            ></span>
+            <span
+              class="
+                block
+                absolute
+                w-5
+                h-0.5
+                bg-current
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="[
+                mobileOpen ? 'opacity-0' : '',
+                scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+              ]"
+            ></span>
+            <span
+              class="
+                block
+                absolute
+                w-7
+                h-0.5
+                bg-current
+                transition
+                duration-500
+                ease-in-out
+              "
+              :class="[
+                mobileOpen ? '-rotate-45' : 'translate-y-2',
+                scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+              ]"
+            ></span>
+          </div>
+        </button>
+      </div>
+      <div
+        class="hidden text-center lg:text-left lg:flex flex-grow"
+        :class="{
+          'block': mobileOpen,
+          'hidden': !mobileOpen
+      }"
+      >
+        <ul
+          class="
+            flex flex-col
+            mt-3
+            mb-1
+            lg:flex-row lg:mx-auto lg:mt-0 lg:mb-0 lg:gap-x-4
+          "
+        >
+         <!--  <li x-on:mouseover="megamenuOpened = false, openedMegamenu = ''">
+            <a
+              href="/services.html"
+              class="
+                block
+                text-base
+                font-sans font-light
+                hover:text-primary-500
+                dark:text-muted-100
+                py-2
+                md:mx-2
+                tw-accessibility
+                text-muted-900
+                dark:text-white
+              "
+              :class="[
+                scrolled || megamenuOpened || mobileOpen ? 'text-muted-800' : 'text-muted-800 dark:text-white'
+              ]"
+            >
+              Services
+            </a>
+          </li> -->
+          <!-- <li x-on:mouseover="megamenuOpened = false, openedMegamenu = ''">
+            <a
+              href="/leases.html"
+              class="
+                block
+                text-base
+                font-sans font-light
+                hover:text-primary-500
+                dark:text-muted-100
+                py-2
+                md:mx-2
+                tw-accessibility
+                text-muted-900
+                dark:text-white
+              "
+              :class="[
+                scrolled || megamenuOpened || mobileOpen ? 'text-muted-800' : 'text-muted-800 dark:text-white'
+              ]"
+            >
+              Leases
+            </a>
+          </li> -->
+          <!--
+            <li x-on:mouseover="megamenuOpened = false, openedMegamenu = ''">
+            <a
+              href="/vehicle.html"
+              class="
+                block
+                text-base
+                font-sans font-light
+                hover:text-primary-500
+                py-2
+                md:mx-2
+                tw-accessibility
+              "
+              :class="[
+                scrolled || megamenuOpened || mobileOpen ? 'text-muted-800' : 'text-muted-800 dark:text-white'
+              ]"
+            >
+              Inventory
+            </a>
+          </li>
+          <li x-on:mouseover="megamenuOpened = false, openedMegamenu = ''">
+            <a
+              href="/dashboard.html"
+              x-show="$store.currentUser !== null"
+              class="
+                block
+                text-base
+                font-sans font-light
+                hover:text-primary-500
+                py-2
+                md:mx-2
+                tw-accessibility
+              "
+              :class="[
+                scrolled || megamenuOpened || mobileOpen ? 'text-muted-800' : 'text-muted-800 dark:text-white'
+              ]"
+            >
+              Account
+            </a>
+
+          </li>
+          -->
+        </ul>
+        <!--
+
+        <div class="flex flex-col my-3 lg:hidden">
+          <div class="flex items-center justify-center mb-4">
+            {{> theme/theme-toggler}}
+          </div>
+          <a
+            href="/signup.html"
+            class="
+              relative
+              w-full
+              font-sans font-normal
+              inline-flex
+              items-center
+              justify-center
+              leading-5
+              no-underline
+              min-w-[130px]
+              space-x-1
+              text-white
+              bg-primary-500
+              h-12
+              px-5
+              py-3
+              text-base
+              hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-500/20
+              tw-accessibility
+              transition-all
+              duration-300
+            "
+          >
+            Register
+          </a>
+        </div>
+        -->
+        <div class="flex flex-col my-3">
+          <div class="flex items-center justify-center mb-4">
+              <div style='padding: 10px;' class="flex items-center space-x-2">
+                  <i class="iconify w-6 h-6 dark:text-white text-primary-500 dark:text-white" data-icon="mdi:phone"></i>
+                  <span class="dark:text-white text-primary-500">(303) 443-0814</span>
+              </div>
+          </div>
+      </div>
+
+
+<div class="flex flex-col my-3">
+          <div class="flex items-center justify-center mb-4">
+              <div style='padding: 10px;' class="flex items-center space-x-2">
+                  <i class="iconify w-6 h-6 dark:text-white text-primary-500 dark:text-white" data-icon="mdi:cart"></i>
+                  <span class="dark:text-white text-primary-500">0</span>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+
+<!--
+    <div class="w-full mt-2 bg-primary-600">
+      <div
+        class="
+          w-full
+          max-w-7xl
+          mx-auto
+          py-2
+          px-5
+          flex
+          items-center
+          justify-between
+          text-center
+        "
+      >
+        <span class="text-center text-white">Alpine Base Edge will be opening 10/23</span>
+        <span class="text-white"> (303) 443-0814 </span>
+      </div>
+  </div>
+
+-->
+<style>
+  .w-full.mt-2 .md\:ml-auto {
+    margin-left: 0px;
+}
+.w-full {
+    justify-content: center;
+}
+</style>
+  <div class="w-full mt-2">
+    <div
+      class="
+        w-full
+        max-w-7xl
+        mx-auto
+        flex
+        py-2
+        px-5
+        flex-row
+        items-center
+        gap-6
+        xs:overflow-x-auto
+     
+      "
+    >
+     <div>
+        <a
+          href="/index.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Home
+        </a>
+      </div>
+
+
+
+      <div>
+        <a
+          href="/shop.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Our Shop
+        </a>
+      </div>
+      <div>
+        <a
+          href="/services.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            whitespace-nowrap
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Services
+        </a>
+      </div>
+
+      
+       <div>
+        <a
+          href="/Leases.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Leases
+        </a>
+      </div>
+
+      <div class="md:ml-auto">
+        <a
+          href="/about.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            whitespace-nowrap
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Company
+        </a>
+      </div>
+      <div>
+        <a
+          href="/jobs.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            whitespace-nowrap
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Jobs
+        </a>
+      </div>
+      <div>
+        <a
+          href="/contact.html"
+          class="
+            block
+            flex-1
+            text-sm
+            font-sans font-light
+            hover:text-primary-500
+            dark:text-white
+            py-2
+            md:mx-2
+            whitespace-nowrap
+            tw-accessibility
+          "
+          :class="[
+            scrolled || megamenuOpened || mobileOpen ? 'text-white' : 'text-muted-800 dark:text-white'
+          ]"
+        >
+          Contact
+        </a>
+      </div>
+
+    </div>
+  </div>
+</nav>

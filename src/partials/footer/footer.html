@@ -1,0 +1,190 @@
+<footer class="
+    group
+    relative
+    text-muted-600
+    body-font
+    overflow-hidden
+    bg-muted-900
+    dark:bg-muted-1000
+  ">
+
+  <div class="relative w-full max-w-7xl mx-auto px-5 py-24 z-20">
+    <div class="flex flex-wrap md:text-left text-center">
+      <div x-data="{
+    leaseLinks: [
+        { text: 'Core Package', url: 'leases.html' },
+        { text: 'Jr Race', url: 'leases.html' }
+    ]
+}" class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="font-sans font-medium text-muted-100 tracking-widest text-sm uppercase mb-4">
+          Leases
+        </h2>
+        <ul class="font-sans space-y-2 mb-10">
+          <template x-for="(link, index) in leaseLinks" :key="index">
+            <li>
+              <a :href="link.url"
+                class="text-sm underline-offset-4 text-muted-300/60 hover:text-white hover:underline dark:text-muted-400 dark:hover:text-muted-100"
+                x-text="link.text"></a>
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <div x-data="{
+        links: [
+            { text: 'All Mountain Tune', url: 'services.html#all-mountain-tune' },
+            { text: 'World Cup Race Tune', url: 'services.html#world-cup-race-tune' },
+            { text: 'Snowboard Tune', url: 'services.html#snowboard-tune' },
+            { text: 'Core Shot Repair', url: 'services.html#core-shot-repair' },
+            { text: 'New Ski Prep', url: 'services.html#new-ski-prep' },
+            { text: 'Binding Mount and Test', url: 'services.html#binding-mount-and-test' },
+        ]
+    }" class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="font-sans font-medium text-muted-100 tracking-widest text-sm uppercase mb-4">
+          Services
+        </h2>
+        <ul class="font-sans space-y-2 mb-10">
+          <template x-for="(link, index) in links" :key="index">
+            <li>
+              <a :href="link.url"
+                class="text-sm underline-offset-4 text-muted-300/60 hover:text-white hover:underline dark:text-muted-400 dark:hover:text-muted-100"
+                x-text="link.text"></a>
+            </li>
+          </template>
+        </ul>
+      </div>
+
+      <div x-data="{
+    links: [
+        { text: 'About', url: 'about.html' },
+        { text: 'Contact', url: 'contact.html' },
+        { text: 'Our Shop', url: 'shop.html' },
+        { text: 'Jobs', url: 'jobs.html' }
+    ]
+}" class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="font-sans font-medium text-muted-100 tracking-widest text-sm uppercase mb-4">
+          Company
+        </h2>
+        <ul class="font-sans space-y-2 mb-10">
+          <template x-for="(link, index) in links" :key="index">
+            <li>
+              <a :href="link.url"
+                class="text-sm underline-offset-4 text-muted-300/60 hover:text-white hover:underline dark:text-muted-400 dark:hover:text-muted-100"
+                x-text="link.text"></a>
+            </li>
+          </template>
+        </ul>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <form name="newsletter" method="POST" data-netlify="true">
+        <h2 class="
+            font-sans font-medium
+            text-muted-100
+            tracking-widest
+            text-sm
+            uppercase
+            mb-4
+          ">
+          SUBSCRIBE
+        </h2>
+        <div class="
+            flex
+            xl:flex-nowrap
+            md:flex-nowrap
+            lg:flex-wrap
+            flex-wrap
+            justify-center
+            items-end
+            md:justify-start
+          ">
+          <div class="relative w-full flex flex-col gap-2">
+
+            <input name="email" type="text" placeholder="Enter your email..." class="
+                w-full
+                h-10
+                bg-muted-800/50
+                border border-muted-700
+                text-sm
+                outline-none
+                py-2
+                px-3
+                leading-8
+                placeholder:text-muted-600
+                text-muted-100
+                transition-colors
+                duration-300
+                tw-accessibility
+              " />
+            <button class="
+                w-full
+                h-10
+                flex
+                items-center
+                justify-center
+                font-sans
+                text-sm text-white
+                bg-primary-500
+                border-0
+                py-2
+                px-6
+                focus:outline-none
+                hover:bg-primary-600
+              ">
+              Subscribe
+            </button>
+
+          </div>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative bg-muted-1000 dark:bg-muted-900 z-20">
+    <div class="
+        w-full
+        max-w-7xl
+        mx-auto
+        px-5
+        py-6
+        flex
+        sm:flex-row
+        flex-col
+      ">
+      <a class="
+          flex
+          font-sans font-light
+          items-center
+          gap-2
+          justify-items-stretch
+          text-muted-900
+        ">
+        <div class="h-14 w-14 sm:h-10 sm:w-10 md:h-14 md:w-14 text-muted-100 justify-start">{{> vector/logos/logo}}
+        </div>
+      </a>
+      <span class="
+          inline-flex
+          gap-3
+          sm:ml-auto sm:mt-0
+          mt-4
+          justify-center
+          sm:justify-start
+        ">
+        <a href="https://www.facebook.com/AlpineBaseandEdge" class="text-muted-400 hover:text-primary-500">
+          <i class="iconify w-4 h-4" data-icon="fa6-brands:facebook-f"></i>
+        </a>
+        <!--
+        <a href="#" class="text-muted-400 hover:text-primary-500">
+          <i class="iconify w-4 h-4" data-icon="fa6-brands:twitter"></i>
+        </a>
+        -->
+        <a href="https://www.instagram.com/alpinebaseedge" class="text-muted-400 hover:text-primary-500">
+          <i class="iconify w-4 h-4" data-icon="fa6-brands:instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/skiboulder" class="text-muted-400 hover:text-primary-500">
+          <i class="iconify w-4 h-4" data-icon="fa6-brands:linkedin-in"></i>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>

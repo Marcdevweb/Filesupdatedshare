@@ -1,0 +1,550 @@
+<div class="py-8 px-4 md:px-6 pb-24">
+  <!--Title-->
+  <div class="flex items-center mb-6">
+    <div>
+      <h1 class="font-sans text-2xl lg:text-3xl text-muted-800 dark:text-white">
+        My Vehicles
+      </h1>
+    </div>
+    <div class="ml-auto">
+      <a
+        href="#"
+        class="
+          relative
+          font-sans font-normal
+          inline-flex
+          items-center
+          justify-center
+          leading-5
+          no-underline
+          w-full
+          md:w-auto
+          min-w-[130px]
+          space-x-1
+          rounded
+          text-white
+          bg-muted-800
+          dark:bg-primary-600
+          h-12
+          px-5
+          py-3
+          text-base
+          hover:bg-muted-700
+          dark:hover:bg-primary-500
+          hover:shadow-xl hover:shadow-muted-300/20
+          dark:hover:shadow-primary-600/20
+          tw-accessibility
+          transition-all
+          duration-300
+        "
+      >
+        <i class="iconify w-4 h-4" data-icon="lucide:plus"></i>
+        <span>New Vehicle</span>
+      </a>
+    </div>
+  </div>
+
+  <!--Grid-->
+  <div class="grid ltablet:grid-cols-12 lg:grid-cols-12 gap-6">
+    <!--Grid item-->
+    <div class="ltablet:col-span-8 lg:col-span-8">
+      <!--Inner Grid-->
+      <div
+        class="
+          h-full
+          grid
+          ltablet:grid-cols-2
+          lg:grid-cols-2
+          border border-muted-200
+          dark:border-muted-800
+          bg-white
+          dark:bg-muted-900
+        "
+      >
+        <!--Left-->
+        <div class="flex items-center justify-center py-8">
+          <div>
+            <img
+              class="max-w-[320px] mx-auto"
+              src="/img/vehicles/grid/7.png"
+              alt="Vehicle"
+            />
+            <!--Charge-->
+            <div class="flex justify-center">
+              <div>
+                <div class="flex gap-1">
+                  <template x-for="index in 20">
+                    <div
+                      class="w-2 h-7"
+                      :class="index < 12 ? 'bg-primary-600' : 'bg-muted-200 dark:bg-muted-800'"
+                    ></div>
+                  </template>
+                </div>
+                <div class="text-center mt-3">
+                  <p
+                    class="font-sans text-xs text-muted-500 dark:text-muted-400"
+                  >
+                    Battery charging (55%)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Right-->
+        <div
+          class="
+            w-full
+            flex flex-col
+            p-8
+            border-l border-muted-200
+            dark:border-muted-800
+          "
+        >
+          <!--Title-->
+          <div class="flex items-center gap-4 mb-10">
+            <div class="leading-tight">
+              <h3
+                class="
+                  font-sans font-semibold
+                  text-xl text-muted-800
+                  dark:text-muted-50
+                "
+              >
+                Ioniq 5
+              </h3>
+              <p class="font-sans text-xs text-muted-400">Vehicle status</p>
+            </div>
+            <div class="ml-auto">
+              <span
+                class="
+                  font-sans font-light
+                  text-lg text-muted-800
+                  dark:text-muted-50
+                "
+              >
+                5811.46 mi
+              </span>
+            </div>
+          </div>
+          <!--Gauge-->
+          <div class="w-full max-w-[200px] mx-auto mb-8">
+            <div class="gauge text-primary-600" style="--rotation: 125deg">
+              <div class="percentage"></div>
+              <div class="mask"></div>
+              <span class="value">67%</span>
+            </div>
+          </div>
+          <!--Maintenance-->
+          <div class="w-full mt-auto">
+            <!--Inner grid-->
+            <div class="grid grid-cols-2 gap-4">
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Air filter change</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Electric pump dust</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Navigator checkup</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Breaks checkup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Grid item-->
+    <div class="ltablet:col-span-4 lg:col-span-4">
+      <!--Card-->
+      <div
+        class="
+          h-full
+          flex flex-col
+          p-8
+          border border-muted-200
+          dark:border-muted-800
+          bg-white
+          dark:bg-muted-900
+        "
+      >
+        <!--Title-->
+        <div class="flex items-center gap-4 mb-10">
+          <div class="leading-tight">
+            <h3
+              class="
+                font-sans font-semibold
+                text-xl text-muted-800
+                dark:text-muted-50
+              "
+            >
+              Estimation
+            </h3>
+            <p class="font-sans text-xs text-muted-400">For next maintenance</p>
+          </div>
+          <div class="ml-auto">
+            <span
+              class="
+                font-sans font-semibold
+                text-xl text-muted-800
+                dark:text-muted-50
+              "
+            >
+              $1,840.00
+            </span>
+          </div>
+        </div>
+        <!--Tier-->
+        <div class="w-full mb-4">
+          <div class="flex items-center gap-2 mb-4">
+            <div
+              class="
+                h-9
+                w-9
+                flex
+                items-center
+                justify-center
+                rounded-full
+                border-2 border-primary-600
+                bg-primary-500/20
+                text-primary-500
+              "
+            >
+              <span class="font-sans font-semibold text-sm">A</span>
+            </div>
+            <div>
+              <h4
+                class="font-sans font-medium text-muted-800 dark:text-muted-50"
+              >
+                A Tier
+              </h4>
+              <p class="font-sans text-xs text-muted-400">Heavy maintenance</p>
+            </div>
+          </div>
+          <div
+            class="
+              font-sans
+              text-xs
+              lg:text-sm
+              text-muted-500
+              dark:text-muted-400
+            "
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si
+              longus, levis dictata sunt. Idem iste, inquam, de voluptate quid
+              sentit? Quis est, qui non oderit
+            </p>
+          </div>
+        </div>
+        <!--Action-->
+        <div class="w-full mt-auto">
+          <!--Button-->
+          <a
+            href="#"
+            class="
+              relative
+              font-sans font-normal
+              inline-flex
+              items-center
+              justify-center
+              leading-5
+              no-underline
+              mt-6
+              w-full
+              space-x-1
+              text-white
+              bg-muted-800
+              dark:bg-primary-600
+              h-12
+              px-5
+              py-3
+              text-base
+              hover:bg-muted-700
+              dark:hover:bg-primary-500
+              hover:shadow-xl hover:shadow-muted-300/20
+              dark:hover:shadow-primary-600/20
+              tw-accessibility
+              transition-all
+              duration-300
+            "
+          >
+            Schedule Maintenance
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--Grid item-->
+    <div class="ltablet:col-span-8 lg:col-span-8">
+      <!--Inner Grid-->
+      <div
+        class="
+          h-full
+          grid
+          ltablet:grid-cols-2
+          lg:grid-cols-2
+          border border-muted-200
+          dark:border-muted-800
+          bg-white
+          dark:bg-muted-900
+        "
+      >
+        <!--Left-->
+        <div class="flex items-center justify-center py-8">
+          <div>
+            <img
+              class="max-w-[320px] mx-auto"
+              src="/img/vehicles/grid/6.png"
+              alt="Vehicle"
+            />
+            <!--Charge-->
+            <div class="flex justify-center">
+              <div>
+                <div class="flex gap-1">
+                  <template x-for="index in 20">
+                    <div
+                      class="w-2 h-7"
+                      :class="index < 17 ? 'bg-primary-600' : 'bg-muted-200 dark:bg-muted-800'"
+                    ></div>
+                  </template>
+                </div>
+                <div class="text-center mt-3">
+                  <p
+                    class="font-sans text-xs text-muted-500 dark:text-muted-400"
+                  >
+                    Battery charging (79%)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Right-->
+        <div
+          class="
+            w-full
+            flex flex-col
+            p-8
+            border-l border-muted-200
+            dark:border-muted-800
+          "
+        >
+          <!--Title-->
+          <div class="flex items-center gap-4 mb-10">
+            <div class="leading-tight">
+              <h3
+                class="
+                  font-sans font-semibold
+                  text-xl text-muted-800
+                  dark:text-muted-50
+                "
+              >
+                New Santa Fe
+              </h3>
+              <p class="font-sans text-xs text-muted-400">Vehicle status</p>
+            </div>
+            <div class="ml-auto">
+              <span
+                class="
+                  font-sans font-light
+                  text-lg text-muted-800
+                  dark:text-muted-50
+                "
+              >
+                3978.12 mi
+              </span>
+            </div>
+          </div>
+          <!--Gauge-->
+          <div class="w-full max-w-[200px] mx-auto mb-8">
+            <div class="gauge text-primary-600" style="--rotation: 75deg">
+              <div class="percentage"></div>
+              <div class="mask"></div>
+              <span class="value">39%</span>
+            </div>
+          </div>
+          <!--Maintenance-->
+          <div class="w-full mt-auto">
+            <!--Inner grid-->
+            <div class="grid grid-cols-2 gap-4">
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Full review</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Engine checkup</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Filters checkup</span>
+              </div>
+              <!--Grid item-->
+              <div class="flex items-center gap-2 font-sans text-muted-500">
+                <i
+                  class="iconify w-4 h-4 text-emerald-500"
+                  data-icon="lucide:check"
+                ></i>
+                <span class="text-xs lg:text-sm">Breaks checkup</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Grid item-->
+    <div class="ltablet:col-span-4 lg:col-span-4">
+      <!--Card-->
+      <div
+        class="
+          h-full
+          flex flex-col
+          p-8
+          border border-muted-200
+          dark:border-muted-800
+          bg-white
+          dark:bg-muted-900
+        "
+      >
+        <!--Title-->
+        <div class="flex items-center gap-4 mb-10">
+          <div class="leading-tight">
+            <h3
+              class="
+                font-sans font-semibold
+                text-xl text-muted-800
+                dark:text-muted-50
+              "
+            >
+              Estimation
+            </h3>
+            <p class="font-sans text-xs text-muted-400">For next maintenance</p>
+          </div>
+          <div class="ml-auto">
+            <span
+              class="
+                font-sans font-semibold
+                text-xl text-muted-800
+                dark:text-muted-50
+              "
+            >
+              $920.00
+            </span>
+          </div>
+        </div>
+        <!--Tier-->
+        <div class="w-full mb-4">
+          <div class="flex items-center gap-2 mb-4">
+            <div
+              class="
+                h-9
+                w-9
+                flex
+                items-center
+                justify-center
+                rounded-full
+                border-2 border-primary-600
+                bg-primary-500/20
+                text-primary-500
+              "
+            >
+              <span class="font-sans font-semibold text-sm">A</span>
+            </div>
+            <div>
+              <h4
+                class="font-sans font-medium text-muted-800 dark:text-muted-50"
+              >
+                B Tier
+              </h4>
+              <p class="font-sans text-xs text-muted-400">Moderate maintenance</p>
+            </div>
+          </div>
+          <div
+            class="
+              font-sans
+              text-xs
+              lg:text-sm
+              text-muted-500
+              dark:text-muted-400
+            "
+          >
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Si
+              longus, levis dictata sunt. Idem iste, inquam, de voluptate quid
+              sentit? Quis est, qui non oderit
+            </p>
+          </div>
+        </div>
+        <!--Action-->
+        <div class="w-full mt-auto">
+          <!--Button-->
+          <a
+            href="#"
+            class="
+              relative
+              font-sans font-normal
+              inline-flex
+              items-center
+              justify-center
+              leading-5
+              no-underline
+              mt-6
+              w-full
+              space-x-1
+              text-white
+              bg-muted-800
+              dark:bg-primary-600
+              h-12
+              px-5
+              py-3
+              text-base
+              hover:bg-muted-700
+              dark:hover:bg-primary-500
+              hover:shadow-xl hover:shadow-muted-300/20
+              dark:hover:shadow-primary-600/20
+              tw-accessibility
+              transition-all
+              duration-300
+            "
+          >
+            Schedule Maintenance
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

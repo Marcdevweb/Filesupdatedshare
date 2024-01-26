@@ -1,0 +1,327 @@
+<div class="py-8 px-4 md:px-6 pb-24" x-data="formStyles()">
+
+  <!--Profile block-->
+  <div class="text-center w-full max-w-4xl mx-auto my-6">
+    <div class="relative h-24 w-24 rounded-full mx-auto mb-4">
+      <img class="rounded-full" src="/img/avatars/25.jpg" alt="User image" />
+      <button
+        class="
+          absolute
+          bottom-0
+          right-0
+          h-8
+          w-8
+          flex
+          items-center
+          justify-center
+          rounded-full
+          text-muted-800
+          dark:text-muted-100
+          border border-muted-200
+          dark:border-muted-700
+          bg-white
+          dark:bg-muted-800
+        "
+      >
+        <i class="iconify" data-icon="lucide:plus"></i>
+      </button>
+    </div>
+    <h3
+      class="font-sans font-light text-2xl text-muted-800 dark:text-muted-50"
+      x-text="$store.displayName"
+    >
+
+    </h3>
+    <p class="font-sans text-muted-400">Los Angeles, CA</p>
+  </div>
+  <!--Form block-->
+  <div class="w-full max-w-xl mx-auto">
+    <form class="space-y-12">
+      <!--Fieldset-->
+      <div>
+        <h4
+          class="
+            font-sans
+            text-xs
+            tracking-wider
+            uppercase
+            text-muted-500
+            pb-4
+            mb-4
+            border-b border-muted-200
+            dark:border-muted-800
+          "
+        >
+          Personal
+        </h4>
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">First Name</label>
+            <div class="group relative">
+              <input
+                type="text"
+                :class="inputs"
+                placeholder="First Name"
+                value="Michael"
+              />
+              <div
+                :class="
+                 inputIcon
+                "
+              >
+                <i class="iconify w-4 h-4" data-icon="lucide:user"></i>
+              </div>
+            </div>
+          </div>
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">Last Name</label>
+            <div class="group relative">
+              <input
+                type="text"
+                :class="
+ inputs
+                "
+                placeholder="Last Name"
+                value="Gheller"
+              />
+              <div
+                class="
+                 inputIcon
+                "
+              >
+                <i class="iconify w-4 h-4" data-icon="lucide:user"></i>
+              </div>
+            </div>
+          </div>
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">
+              Email Address
+            </label>
+            <div class="group relative">
+              <input
+                type="text"
+                :class="
+ inputs
+                "
+                placeholder="Email Address"
+                value="mgheller@gmail.com"
+              />
+              <div
+                class="
+                 inputIcon
+                "
+              >
+                <i class="iconify w-4 h-4" data-icon="lucide:mail"></i>
+              </div>
+            </div>
+          </div>
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">Age</label>
+            <div class="group relative">
+              <input
+                type="number"
+                :class="inputs"
+                placeholder="Your age"
+                value="39"
+              />
+              <div
+                :class="inputIcon"
+              >
+                <i
+                  class="iconify w-4 h-4"
+                  data-icon="lucide:calendar-heart"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fieldset-->
+      <div>
+        <h4
+          class="
+            font-sans
+            text-xs
+            tracking-wider
+            uppercase
+            text-muted-500
+            pb-4
+            mb-4
+            border-b border-muted-200
+            dark:border-muted-800
+          "
+        >
+          Security
+        </h4>
+        <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">
+              Current Password
+            </label>
+            <div class="group relative">
+              <input
+                type="password"
+                :class="
+ inputs
+                "
+                placeholder="Your current password"
+              />
+              <div
+                :class="
+                 inputIcon
+                "
+              >
+                <i class="iconify w-4 h-4" data-icon="lucide:lock"></i>
+              </div>
+            </div>
+          </div>
+          <!--Input-->
+          <div class="relative">
+            <label class="font-sans text-sm text-muted-400">New Password</label>
+            <div class="group relative">
+              <input
+                type="password"
+                :class="
+ inputs
+                "
+                placeholder="Your new password"
+              />
+              <div
+                :class="
+                 inputIcon
+                "
+              >
+                <i class="iconify w-4 h-4" data-icon="lucide:lock"></i>
+              </div>
+            </div>
+          </div>
+          <!--Save-->
+          <div class="w-full -mt-4 md:col-start-2">
+            <!--Button-->
+            <button
+              type="button"
+              class="
+                relative
+                font-sans font-normal
+                inline-flex
+                items-center
+                justify-center
+                leading-5
+                no-underline
+                mt-6
+                w-full
+                space-x-1
+                text-white
+                bg-muted-800
+                dark:bg-primary-600
+                h-12
+                px-5
+                py-3
+                text-base
+                hover:bg-muted-700
+                dark:hover:bg-primary-500
+                hover:shadow-xl hover:shadow-muted-300/20
+                dark:hover:shadow-primary-600/20
+                tw-accessibility
+                transition-all
+                duration-300
+              "
+            >
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="py-8 px-4 md:px-6 pb-24" x-data="formStyles()">
+  <!--Profile block-->
+  <div class="text-center w-full max-w-4xl mx-auto my-6">
+      <div class="relative h-24 w-24 rounded-full mx-auto mb-4">
+          <img class="rounded-full" src="/img/avatars/ski-racer.jpg" alt="Ski Racer image" />
+          <button class="absolute bottom-0 right-0 h-8 w-8 flex items-center justify-center rounded-full text-muted-800 dark:text-muted-100 border border-muted-200 dark:border-muted-700 bg-white dark:bg-muted-800">
+              <i class="iconify" data-icon="lucide:plus"></i>
+          </button>
+      </div>
+      <h3 class="font-sans font-light text-2xl text-muted-800 dark:text-muted-50" x-text="$store.currentRacer.displayName"></h3>
+      <p class="font-sans text-muted-400">Ski Racer Team</p>
+  </div>
+  <!--Form block-->
+  <div class="w-full max-w-xl mx-auto">
+      <form class="space-y-12">
+          <!--Fieldset-->
+          <div>
+              <h4 class="font-sans text-xs tracking-wider uppercase text-muted-500 pb-4 mb-4 border-b border-muted-200 dark:border-muted-800">Personal</h4>
+              <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+                  <!--Input-->
+                  <div class="relative">
+                      <label class="font-sans text-sm text-muted-400">First Name</label>
+                      <div class="group relative">
+                          <input type="text" :class="inputs" placeholder="First Name" />
+                          <div class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-muted-400 group-focus-within:text-primary-500 transition-colors duration-300">
+                              <i class="iconify w-4 h-4" data-icon="lucide:user"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Input-->
+                  <div class="relative">
+                      <label class="font-sans text-sm text-muted-400">Last Name</label>
+                      <div class="group relative">
+                          <input type="text" :class="inputs" placeholder="Last Name" />
+                          <div class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-muted-400 group-focus-within:text-primary-500 transition-colors duration-300">
+                              <i class="iconify w-4 h-4" data-icon="lucide:user"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Input-->
+                  <div class="relative">
+                      <label class="font-sans text-sm text-muted-400">Age</label>
+                      <div class="group relative">
+                          <input type="number" :class="inputs" placeholder="Age" />
+                          <div class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-muted-400 group-focus-within:text-primary-500 transition-colors duration-300">
+                              <i class="iconify w-4 h-4" data-icon="lucide:calendar"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Fieldset-->
+          <div>
+              <h4 class="font-sans text-xs tracking-wider uppercase text-muted-500 pb-4 mb-4 border-b border-muted-200 dark:border-muted-800">Ski Racing Details</h4>
+              <div class="grid md:grid-cols-2 gap-x-6 gap-y-4">
+                  <!--Input-->
+                  <div class="relative">
+                      <label class="font-sans text-sm text-muted-400">Team Name</label>
+                      <div class="group relative">
+                          <input type="text" :class="inputs" placeholder="Team Name" />
+                          <div class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-muted-400 group-focus-within:text-primary-500 transition-colors duration-300">
+                              <i class="iconify w-4 h-4" data-icon="lucide:flag"></i>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Input-->
+                  <div class="relative">
+                      <label class="font-sans text-sm text-muted-400">Best Time</label>
+                      <div class="group relative">
+                          <input type="text" :class="inputs" placeholder="hh:mm:ss" />
+                          <div class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-muted-400 group-focus-within:text-primary-500 transition-colors duration-300">
+                              <i class="iconify w-4 h-4" data-icon="lucide:timer"></i>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--Button-->
+          <div class="flex justify-center mt-8">
+              <button type="submit" class="btn-primary w-full md:w-1/2">Add Ski Racer</button>
+          </div>
+      </form>
+  </div>
+</div>

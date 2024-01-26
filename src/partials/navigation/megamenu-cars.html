@@ -1,0 +1,275 @@
+<div
+  class="
+    fixed
+    lg:absolute
+    top-0
+    lg:top-14
+    inset-x-0
+    lg:left-0
+    w-full
+    lg:w-[540px]
+    h-screen
+    lg:h-auto
+    pt-2
+    lg:-translate-x-1/4
+    transition-all
+    duration-300
+  "
+  x-bind:class="{
+    'opacity-100 translate-y-0 z-50': openedMegamenu === 'megamenu-1',
+    'opacity-0 translate-y-1 pointer-events-none z-0': openedMegamenu !== 'megamenu-1'
+  }"
+  x-cloak
+>
+  <div
+    class="
+      relative
+      w-full
+      px-3
+      pb-3
+      pt-12
+      lg:p-3
+      bg-white
+      dark:bg-muted-800
+      border border-muted-200
+      dark:border-muted-700
+      shadow-2xl shadow-muted-500/20
+      dark:shadow-muted-800/20
+    "
+  >
+    <!--Close button-->
+    <button
+      type="button"
+      class="
+        absolute
+        top-2
+        right-2
+        h-12
+        w-12
+        flex
+        lg:hidden
+        items-center
+        justify-center
+        text-muted-600
+        dark:text-muted-200
+      "
+      @click="megamenuOpened = false, openedMegamenu = ''"
+    >
+      <i class="iconify w-6 h-6" data-icon="lucide:x"></i>
+    </button>
+
+    <!--Grid-->
+    <div
+      class="
+        grid
+        md:grid-cols-2
+        gap-1
+        md:gap-2
+        text-left
+        overflow-y-auto
+        slimscroll
+        ptablet:pb-10
+        ltablet:pb-10
+      "
+    >
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/vehicles/limousine}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+          Ski Tunes
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Fast and elegant
+          </p>
+        </div>
+      </a>
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/vehicles/suv}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+          Ski Prep
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Classy and cozy
+          </p>
+        </div>
+      </a>
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/services/snowboard}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+          Snowboard Tunes
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Sweet an liable
+          </p>
+        </div>
+      </a>
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/vehicles/break}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+            Binding
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Strong companion
+          </p>
+        </div>
+      </a>
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/vehicles/coupe}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+          Wax & Grind
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Fast and elegant
+          </p>
+        </div>
+      </a>
+      <!--Grid item-->
+      <a
+        href="/inventory.html"
+        class="
+          relative
+          flex
+          gap-4
+          p-4
+          hover:bg-muted-100
+          dark:hover:bg-muted-900
+          z-10
+          transition-colors
+          duration-300
+        "
+      >
+        <div class="w-full max-w-[60px] my-2 text-muted-500">
+          {{> vector/vehicles/van}}
+        </div>
+        <div>
+          <h4
+            class="
+              font-heading font-semibold
+              text-sm text-muted-800
+              dark:text-white
+            "
+          >
+            Boot Repair
+          </h4>
+          <p class="font-sans text-xs text-muted-500 dark:text-muted-400">
+            Crafty and robust
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

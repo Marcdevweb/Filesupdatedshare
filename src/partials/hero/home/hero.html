@@ -1,0 +1,334 @@
+<section
+  class="relative swiper"
+  x-cloak
+  x-data="{swiper: null}"
+  x-init="swiper = new Swiper($refs.container, {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    effect: 'coverflowEffect',
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      1024: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    },
+  });
+  console.log(swiper.realIndex);
+  swiper.realIndex = 0;
+  let interval = setInterval(() => {
+    swiper.slideNext()
+  }, 5000)
+  swiper.on('slideChange', function () {
+    clearInterval(interval)
+    interval = setInterval(() => {
+      swiper.slideNext()
+    }, 5000)
+  });
+  "
+>
+  <!-- Content -->
+  <div
+    class="
+      absolute
+      top-0
+      left-0
+      w-full
+      h-full
+      flex
+      items-center
+      z-30
+
+    "
+  >
+  <div class="w-full max-w-7xl mx-auto grid grid-cols-12 px-4">
+    <div class="col-span-12 text-center ltablet:text-left lg:text-left ltablet:col-span-5 lg:col-span-5 space-y-4">
+        <h1 class="font-sans font-semibold text-5xl ltablet:text-6xl lg:text-7xl leading-none text-white">
+            Experience Peak Performance
+        </h1>
+        <p class="font-sans text-lg text-white max-w-md mx-auto ltablet:mx-0 lg:mx-0">
+            Discover top-quality gear, expert advice, and a passion for skiing that matches yours. Elevate your alpine adventures with us!
+        </p>
+        <div class="mt-4 flex justify-center ltablet:justify-start lg:justify-start space-x-4">
+            <a href="/leases.html" class="bg-white font-bold py-2 px-6 rounded-full text-muted-900 hover:bg-primary-500 hover:text-white transition duration-300">Reserve Your Lease</a>
+            <a href="/services.html" class="border-2 border-white py-2 px-6 rounded-full text-white font-semibold hover:bg-white hover:text-primary-500 transition duration-300">Schedule Your Tune</a>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+  <!--Slider-->
+  <div class="swiper-container relative" x-ref="container">
+    <!-- Overlay -->
+    <div
+      class="
+        absolute
+        top-0
+        left-0
+        w-full
+        h-full
+        flex
+        items-center
+        bg-muted-900/30
+        z-20
+      "
+    ></div>
+    <div class="swiper-wrapper">
+      <!--Slide 1-->
+      <div
+        class="
+          swiper-slide
+          w-full
+          bg-muted-100
+          h-screen
+          min-h-screen
+          dark:bg-muted-1000
+        "
+        :class="swiper.realIndex === 0 ? 'lg:animate-kenburns bg-center lg:bg-left-top' : ''"
+        data-background="/img/bg/ski1.jpg"
+        data-swiper-autoplay="2000"
+      >
+      </div>
+      <!--Slide 2-->
+      <div
+        class="
+          swiper-slide
+          w-full
+          bg-muted-100
+          h-screen
+          min-h-screen
+          dark:bg-muted-1000
+        "
+        :class="swiper.realIndex === 1 ? 'lg:animate-kenburns bg-center lg:bg-left-top' : ''"
+        data-background="/img/bg/ski2.jpg"
+      >
+      </div>
+      <!--Slide 3-->
+      <div
+        class="
+          swiper-slide
+          w-full
+          bg-muted-100
+          h-screen
+          min-h-screen
+          dark:bg-muted-1000
+        "
+        :class="swiper.realIndex === 2 ? 'lg:animate-kenburns bg-center lg:bg-left-top' : ''"
+        data-background="/img/bg/ski3.jpg"
+      >
+      </div>
+      <!--Slide 5-->
+      <div
+        class="
+          swiper-slide
+          w-full
+          bg-muted-100
+          h-screen
+          min-h-screen
+          dark:bg-muted-1000
+        "
+        :class="swiper.realIndex === 4 ? 'lg:animate-kenburns bg-center lg:bg-left-top' : ''"
+        data-background="/img/bg/ski4.jpg"
+      >
+      </div>
+    </div>
+
+    <!--Controls-->
+    <!--
+
+
+    <div
+      class="
+        swiper-caption
+        absolute
+        bottom-0
+        right-0
+        w-full
+        max-w-sm
+        border border-muted-800
+        bg-muted-900/80
+        hover:bg-muted-900
+        text-white
+        z-30
+        transition-colors
+        duration-300
+      "
+    >
+      <div class="swiper-caption-inner">
+        <div class="flex gap-4 p-5" x-show="swiper.realIndex === 0">
+          <div class="h-12 w-12 min-w-[3rem] flex items-center justify-center">
+            {{> vector/logos/hyundai-icon}}
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-lg">Tucson 2022</h3>
+            <p class="font-sans text-xs">Deep Gray · 19’’ Sport Wheels · LED</p>
+            <p class="font-sans text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Multa
+              sunt dicta ab.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5" x-show="swiper.realIndex === 1">
+          <div class="h-12 w-12 min-w-[3rem] flex items-center justify-center">
+            {{> vector/logos/audi-icon}}
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-lg">Q3 2022</h3>
+            <p class="font-sans text-xs">Suburst · 18’’ Sport Wheels · LED</p>
+            <p class="font-sans text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Multa
+              sunt dicta ab.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5" x-show="swiper.realIndex === 2">
+          <div class="h-12 w-12 min-w-[3rem] flex items-center justify-center">
+            {{> vector/logos/landrover-icon}}
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-lg">Velar 2022</h3>
+            <p class="font-sans text-xs">Metal · 20’’ Sport Wheels · LED</p>
+            <p class="font-sans text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Multa
+              sunt dicta ab.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5" x-show="swiper.realIndex === 3">
+          <div class="h-12 w-12 min-w-[3rem] flex items-center justify-center">
+            {{> vector/logos/mercedes-icon}}
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-lg">Class C 2022</h3>
+            <p class="font-sans text-xs">Black · 18’’ Sport Wheels · Coupé</p>
+            <p class="font-sans text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Multa
+              sunt dicta ab.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5" x-show="swiper.realIndex === 4">
+          <div class="h-12 w-12 min-w-[3rem] flex items-center justify-center">
+            {{> vector/logos/bmw-icon}}
+          </div>
+          <div>
+            <h3 class="font-sans font-semibold text-lg">Series 7 2022</h3>
+            <p class="font-sans text-xs">Black · 18’’ Sport Wheels · Coupé</p>
+            <p class="font-sans text-xs mt-1">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Multa
+              sunt dicta ab.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full flex items-center border-t border-muted-800">
+          <div class="flex">
+            <div class="carousel-controls flex">
+              <button
+                class="
+                  w-14
+                  h-14
+                  flex
+                  items-center
+                  justify-center
+                  hover:bg-muted-800 hover:text-primary-500
+                  transition-colors
+                  duration-300
+                "
+                @click="swiper.slidePrev()"
+              >
+                <i class="iconify w-5 h-5" data-icon="lucide:arrow-left"></i>
+              </button>
+
+              <button
+                class="
+                  w-14
+                  h-14
+                  flex
+                  items-center
+                  justify-center
+                  hover:bg-muted-800 hover:text-primary-500
+                  transition-colors
+                  duration-300
+                "
+                @click="swiper.slideNext()"
+              >
+                <i class="iconify w-5 h-5" data-icon="lucide:arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex gap-4 ml-auto pr-4" x-show="swiper.realIndex === 0">
+            <div>
+              <span class="font-sans text-xs">120mph</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">Hybrid</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">450mi</span>
+            </div>
+          </div>
+          <div class="flex gap-4 ml-auto pr-4" x-show="swiper.realIndex === 1">
+            <div>
+              <span class="font-sans text-xs">160mph</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">Hybrid</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">350mi</span>
+            </div>
+          </div>
+          <div class="flex gap-4 ml-auto pr-4" x-show="swiper.realIndex === 2">
+            <div>
+              <span class="font-sans text-xs">160mph</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">Hybrid</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">350mi</span>
+            </div>
+          </div>
+
+          <div class="flex gap-4 ml-auto pr-4" x-show="swiper.realIndex === 3">
+            <div>
+              <span class="font-sans text-xs">160mph</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">Hybrid</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">350mi</span>
+            </div>
+          </div>
+          <div class="flex gap-4 ml-auto pr-4" x-show="swiper.realIndex === 4">
+            <div>
+              <span class="font-sans text-xs">160mph</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">Hybrid</span>
+            </div>
+            <div>
+              <span class="font-sans text-xs">350mi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</section>

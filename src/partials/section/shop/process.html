@@ -1,0 +1,147 @@
+<section class="w-full py-12 px-4 bg-white dark:bg-muted-900 overflow-hidden">
+    <div class="w-full max-w-7xl mx-auto">
+      <!--Section title-->
+      <div class="w-full max-w-lg mx-auto text-center space-y-4 py-6">
+        <!--Badge-->
+        <span
+          class="
+            inline-block
+            font-sans
+            text-xs
+            py-1.5
+            px-3
+            m-1
+            rounded-full
+            bg-primary-100
+            text-primary-500
+            dark:bg-primary-500 dark:text-white
+          "
+        >
+          Process
+        </span>
+        <!--Title-->
+        <h2
+          class="
+            font-heading font-light
+            text-4xl
+            md:text-5xl
+            text-muted-800
+            dark:text-white
+          "
+        >
+          Our Tuning Process
+        </h2>
+        <!--Subtitle-->
+        <p
+          class="font-sans font-light text-lg text-muted-500 dark:text-muted-400"
+        >
+        Experience precision tuning and expert care for your skis at Alpine Base and Edge.
+        </p>
+      </div>
+
+      <!--Timeline-->
+      <div class="w-full max-w-5xl mx-auto px-4 py-12">
+        <div class="grid gap-4 mx-4 sm:grid-cols-12">
+          <div class="col-span-12 sm:col-span-3">
+            <div
+              class="
+                font-sans
+                text-center
+                sm:text-left
+                mb-14
+                before:block
+                before:w-24
+                before:h-3
+                before:mb-5
+                before:rounded-md
+                before:mx-auto
+                sm:before:mx-0
+                before:bg-primary-500
+                dark:before:bg-primary-600
+              "
+            >
+              <h3 class="text-3xl font-light text-muted-800 dark:text-muted-100">
+                How We Tune
+              </h3>
+              <span
+                class="text-sm font-light tracking-wider uppercase text-muted-400"
+              >
+              A step by step breakdown
+              </span>
+            </div>
+          </div>
+          <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+            <div x-data="{
+                steps: [
+                    { title: 'Engage Customer', description: 'Warmly welcome the customer to our shop, understanding their needs and expectations.' },
+                    { title: 'Review Skis with Customer', description: 'Carefully inspect the skis with the customer, checking for any existing damages.' },
+                    { title: 'Make Recommendations', description: 'Provide expert advice on necessary maintenance or gear upgrades if needed.' },
+                    { title: 'Edge Preference Inquiry', description: 'Discuss with the customer on how they prefer their edges set for a personalized tuning experience.' },
+                    { title: 'P-Tex Application', description: 'Apply P-Tex either by hand or using the Wintersteiger Basejet to repair any damages on the base.' },
+                    { title: 'Edge Grinding', description: 'Grind the edges to the customer-specified angle ensuring precise and sharp edges.' },
+                    { title: 'Trimjet Tuning', description: 'Utilize the Wintersteiger Trimjet to tune the edges as per customer specification.' },
+                    { title: 'Polishing', description: 'Employ the Grindrite Polisher to give the skis a smooth finish.' },
+                    { title: 'Structure Work', description: 'Carry out structure work using the Wintersteiger Discovery for optimal glide.' },
+                    { title: 'Hand Tune Edges', description: 'Manually fine-tune the edges as per customer specification for a tailored skiing experience.' },
+                    { title: 'Wax Application', description: 'Apply premium Holmenkol ski wax to provide a smooth and protective coating.' },
+                    { title: 'Laser Cook Wax', description: 'Utilize the Laser Cook Waxer to perfectly meld the wax with the base.' },
+                    { title: 'Scrape & Brush', description: 'Scrape off excess wax and brush the base to reveal a smooth, ready-to-ski finish.' },
+                    { title: 'Handover to Customer', description: 'Hand deliver the finely tuned skis to the customer, ensuring satisfaction with the work done.' }
+                ],
+                currentStep: 0
+            }"
+            class="
+                col-span-12
+                space-y-12
+                relative
+                px-4
+                sm:col-span-8
+                sm:space-y-8
+                sm:before:absolute
+                sm:before:top-2
+                sm:before:bottom-0
+                sm:before:w-0.5
+                sm:before:-left-3
+                before:bg-muted-200
+                dark:before:bg-muted-700
+              "
+            >
+            <template x-for="(step, index) in steps" :key="index">
+              <div
+                class="
+                  flex flex-col
+                  sm:relative
+                  sm:before:absolute
+                  sm:before:top-2
+                  sm:before:w-4
+                  sm:before:h-4
+                  sm:before:rounded-full
+                  sm:before:left-[-35px]
+                  sm:before:z-[1]
+                  before:bg-primary-600
+                "
+              >
+                <h3
+                x-text="step.title"
+                  class="
+                    text-xl
+                    font-light
+                    tracking-wide
+                    text-muted-800
+                    dark:text-muted-100
+                  "
+                >
+                </h3>
+                <time class="text-xs tracking-wide uppercase text-muted-400" x-text="'Step ' + (index + 1)"></time>
+                <p
+                x-text="step.description"
+                class="mt-3 max-w-xl text-muted-500 dark:text-muted-400">
+                </p>
+              </div>
+            </template>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

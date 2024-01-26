@@ -1,0 +1,88 @@
+{
+  "name": "finity",
+  "version": "1.1.0",
+  "license": "See LICENCE.md",
+  "private": "true",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "run-p test:*",
+    "test:lint": "run-s lint:eslint lint:stylelint lint:prettier",
+    "lint": "run-s lint:eslint:fix lint:stylelint:fix lint:prettier:fix",
+    "lint:prettier": "prettier --check \"./src/**/*.(js|css|pcss|postcss|html)\"",
+    "lint:prettier:fix": "prettier --write \"./src/**/*.(js|css|pcss|postcss|html)\"",
+    "lint:eslint": "eslint --ext .js ./src",
+    "lint:eslint:fix": "eslint --fix --ext .js ./src",
+    "lint:stylelint": "stylelint ./src/**/*.{css,pcss,postcss}",
+    "lint:stylelint:fix": "stylelint ./src/**/*.{css,pcss,postcss} --fix"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "3.12.0",
+    "@alpinejs/intersect": "3.12.0",
+    "@alpinejs/persist": "3.12.0",
+    "@iconify/iconify": "3.1.0",
+    "@ryangjchandler/alpine-tooltip": "1.2.0",
+    "alpinejs": "3.12.0",
+    "apexcharts": "3.39.0",
+    "firebase": "^10.5.0",
+    "flowbite": "^1.8.1",
+    "lit": "2.7.3",
+    "numerable": "^0.3.15",
+    "prism-theme-vars": "0.2.4",
+    "prismjs": "1.29.0",
+    "swiper": "9.2.4",
+    "vidstack": "^0.4.5"
+  },
+  "devDependencies": {
+    "@iconify/json": "2.2.56",
+    "@tailwindcss/aspect-ratio": "0.4.2",
+    "@tailwindcss/forms": "0.5.3",
+    "@tailwindcss/line-clamp": "0.4.4",
+    "@tailwindcss/typography": "0.5.9",
+    "autoprefixer": "10.4.14",
+    "chalk": "5.2.0",
+    "cssnano": "6.0.0",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "fast-glob": "3.2.12",
+    "lint-staged": "13.2.2",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.23",
+    "postcss-class-name-shortener": "2.0.0",
+    "prettier": "2.8.8",
+    "stylelint": "15.6.0",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-standard": "33.0.0",
+    "tailwindcss": "3.3.2",
+    "vite": "4.3.3",
+    "vite-plugin-handlebars": "1.6.0",
+    "vite-plugin-purge-icons": "0.9.2",
+    "yorkie": "2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "stylelint",
+      "prettier --write"
+    ],
+    "*.pcss": [
+      "stylelint",
+      "prettier --write"
+    ],
+    "*.postcss": [
+      "stylelint",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ]
+  }
+}

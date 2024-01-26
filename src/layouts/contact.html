@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  x-data="layout()"
+  :class="{
+  'dark': $store.app.isDark,
+  '': !$store.app.isDark
+}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ski Leasing & Tuning in Boulder | Alpine Base Edge</title>
+    <meta name="description" content="Leading ski & snowboard leasing in Boulder, offering top gear, expert tuning, & dedicated instruction for racers and recreational skiers alike. Experience seamless winter sports with ABE">
+    <link rel="canonical" href="https://www.skiboulder.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/postcss/main.postcss" />
+  </head>
+  <body class="w-full h-full bg-white dark:bg-muted-900">
+    <!-- prettier-ignore -->
+
+    {{> popups/opening}}
+
+
+    <main class="w-full">
+      <!-- Renders the page body -->
+      {{> @partial-block }}
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
+</html>

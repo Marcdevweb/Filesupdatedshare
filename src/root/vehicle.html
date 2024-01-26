@@ -1,0 +1,22 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<div x-data="vehicle()" x-init="initScrollAnchors()">
+  <!--Vehicle navigation-->
+  {{> navigation/navbar-vehicle}}
+
+  <!--Hero-->
+  {{> hero/vehicle/hero}}
+
+  <!--Content-->
+  {{> section/vehicle/vehicle-wrapper}}
+</div>
+
+<!--Footer-->
+{{> footer/footer}}
+
+<!--Back to top button-->
+{{> misc/backtotop}}
+
+<!--End Layout-->
+{{/minimal}}

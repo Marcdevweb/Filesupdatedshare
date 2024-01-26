@@ -1,0 +1,85 @@
+<!--Start Layout-->
+{{#> dashboard }}
+
+<!--Toolbar-->
+{{> navigation/toolbar}}
+
+<!--Content-->
+
+<section class="w-full max-w-4xl mx-auto my-6" x-data="formStyles()">
+
+    <form>
+        <!-- Skier Name -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="text" name="skier_name" id="skier_name" :class="flowBiteA" placeholder=" " required />
+            <label for="skier_name" :class="flowBiteB">Skier Name</label>
+        </div>
+
+        <!-- Parent's Name -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="text" name="parents_name" id="parents_name" :class="flowBiteA" placeholder=" " required />
+            <label for="parents_name" :class="flowBiteB">Parent's Name</label>
+        </div>
+
+        <!-- Athlete's Height -->
+        <div class="flex justify-between">
+            <!-- Feet -->
+            <div class="relative z-0 w-1/2 pr-2 mb-6 group">
+                <input type="number" name="height_feet" id="height_feet" :class="flowBiteA" placeholder=" " required />
+                <label for="height_feet" :class="flowBiteB">Feet</label>
+            </div>
+
+            <!-- Inches -->
+            <div class="relative z-0 w-1/2 pl-2 mb-6 group">
+                <input type="number" name="height_inches" id="height_inches" :class="flowBiteA" placeholder=" " required />
+                <label for="height_inches" :class="flowBiteB">Inches</label>
+            </div>
+        </div>
+
+        <!-- Athlete's Weight -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="number" name="weight" id="weight" :class="flowBiteA" placeholder=" " required />
+            <label for="weight" :class="flowBiteB">Athlete's Weight</label>
+        </div>
+
+        <!-- Athlete's Skier Type (Dropdown) -->
+        <div class="relative z-0 w-full mb-6 group">
+            <select name="skier_type" id="skier_type" :class="flowBiteA" required>
+                <option value="">Select Skier Type</option>
+                <!-- Add more options as needed -->
+                <option value="type1">Type 1</option>
+                <option value="type2">Type 2</option>
+            </select>
+            <label for="skier_type" :class="flowBiteB">Athlete's Skier Type</label>
+        </div>
+
+        <!-- Athlete's Age -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="number" name="age" id="age" :class="flowBiteA" placeholder=" " required />
+            <label for="age" :class="flowBiteB">Athlete's Age</label>
+        </div>
+
+        <!-- ZIP -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="text" name="zip" id="zip" :class="flowBiteA" placeholder=" " required />
+            <label for="zip" :class="flowBiteB">ZIP</label>
+        </div>
+
+        <!-- Email Address -->
+        <div class="relative z-0 w-full mb-6 group">
+            <input type="email" name="email" id="email" :class="flowBiteA" placeholder=" " required />
+            <label for="email" :class="flowBiteB">Email Address</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+    </form>
+
+
+</section>
+
+
+
+
+<!--End Layout-->
+{{/dashboard}}

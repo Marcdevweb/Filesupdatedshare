@@ -1,0 +1,96 @@
+<!--Start Layout-->
+{{#> minimal }}
+
+<!--Navbar-->
+{{> navigation/navbar-static }}
+
+<!--Hero-->
+{{> hero/home/hero}}
+
+<!--Testimonials-->
+{{> section/testimonials/reviews}}
+
+<!--
+<section class="w-full py-12 px-4 bg-white dark:bg-muted-900">
+
+<div x-data="{ products: [
+  {name: 'Racing Helmet', image: '/path/to/helmet.jpg', description: 'High-quality helmet for maximum protection.'},
+  {name: 'Ski Poles', image: '/path/to/poles.jpg', description: 'Lightweight and durable poles for optimal skiing.'},
+  {name: 'Racing Skis', image: '/path/to/skis.jpg', description: 'Designed for speed and precision on the slopes.'},
+  {name: 'Racing Boots', image: '/path/to/boots.jpg', description: 'Comfortable fit with superior ankle support.'}
+]}">
+   <section class="grid grid-cols-3 gap-4">
+      <template x-for="product in products" :key="product.name">
+          <div class="bg-white dark:bg-muted-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img :src="product.image" :alt="product.name" class="w-full h-48 object-cover rounded-t-lg">
+              <h3 class="font-semibold text-xl mt-4 mb-2 dark:text-white">{{ product.name }}</h3>
+              <p class="text-gray-600 dark:text-muted-400">{{ product.description }}</p>
+          </div>
+      </template>
+  </div>
+</div>
+</section>
+-->
+
+
+
+
+
+<section class="w-full py-12 px-4 bg-white dark:bg-muted-900" >
+  <div class="w-full max-w-7xl mx-auto">
+    <!--Layout-->
+    <div
+      class="
+        w-full
+        flex flex-col
+        ltablet:flex-row
+        lg:flex-row
+        gap-0
+        ltablet:gap-10
+        lg:gap-28
+      "
+    >
+      <!--Column-->
+      <div class="w-full ltablet:w-8/12 lg:w-8/12">
+        <!--Techs-->
+
+        <!--Features-->
+        {{> demo/demo-features}}
+
+        <!--Template demos-->
+
+        <!--FAQ-->
+      </div>
+      <!--Column-->
+      <div class="w-full ltablet:w-4/12 lg:w-4/12">
+      </div>
+    </div>
+  </div>
+</section>
+<!--
+
+<div class="container mx-auto p-8">
+  <section class="grid grid-cols-3 gap-4">
+      <div class="relative">
+          <img src="/img/photo/blocks/skiblock1.jpg" alt="Description" class="w-full h-[280px] object-cover">
+          <p class="absolute bottom-0 left-1/2 w-full transform -translate-x-1/2 bg-white bg-opacity-70 py-1 px-3 rounded font-semibold text-left">Ski Racing 101</p>
+      </div>
+      <div class="relative">
+          <img src="/img/photo/blocks/disco1.jpg" alt="Description" class="w-full h-[280px] object-cover">
+          <p class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 py-1 px-3 rounded text-center">Our Shop</p>
+      </div>
+      <div class="relative">
+          <img src="/img/photo/blocks/skiblock1.jpg" alt="Description" class="w-full h-[280px] object-cover">
+          <p class="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-50 py-1 px-3 rounded text-center">Image 3 Text</p>
+      </div>
+  </section>
+</div>
+-->
+<!--CTA-->
+{{> section/action/cta-1}}
+
+<!--Back to top button-->
+{{> misc/backtotop}}
+
+<!--End Layout-->
+{{/minimal}}
